@@ -1,42 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNgo7zFt-FiFjZtuPzhuDz7VUu87kIFhU&callback=initMap" charset="utf-8"></script>
-	<script type="text/javascript" charset="utf-8">
-	
-		var map;
-		var marker;
-		var myPos = {lat: -8.190219817622724, lng: -34.92728375330353};
-		
-		function initMap() {
-			map = new google.maps.Map(document.getElementById('map'), {
-			center: myPos,
-			zoom: 18
-			});
-		
-			marker = new google.maps.Marker({
-				position: myPos,
-				map: map,
-				draggable: false,
-				animation: google.maps.Animation.DROP
-			});
-	
-			function drop() {
-				for (var i = 0; i < markerArray.length; i++) {
-					setTimeout(function() {
-					addMarkerMethod();
-					}, i * 200);
-				}
-			}
-			
-			marker.addListener('click', function() {
-				var infowindow = new google.maps.InfoWindow({
-					content: "<div><h1>Compliance Software LTDA</h1><h4>Empresa focada na criação de softwares web e Android</h4></div>"
-				});
-				infowindow.open(map, marker);
-			});
-
-		}
-		</script>
+		<iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJUwGe_jwcqwcR6SeSHkxkjUY&key=AIzaSyCNgo7zFt-FiFjZtuPzhuDz7VUu87kIFhU" allowfullscreen></iframe>
 
 		<footer class="container-fluid text-center">
 			<a href="#myPage" title="To Top">

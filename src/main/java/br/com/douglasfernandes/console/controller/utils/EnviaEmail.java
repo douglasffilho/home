@@ -19,7 +19,7 @@ import javax.mail.internet.MimeMessage;
  */
 public class EnviaEmail 
 {
-	private static final String username = "projetotvmais.iptv@gmail.com";
+	private static final String username = "douglasf.filho@gmail.com";
 	private static final String password = "$9916do@d";
 
 	/**

@@ -29,25 +29,14 @@
 		<meta name="msapplication-TileImage" content="<c:url value="/resources/favicon/ms-icon-144x144.png" />">
 		<meta name="theme-color" content="#ffffff">
 		
-		<!-- CSS padr�o -->
 		<link href='<c:url value="/resources/css/default.css"/>' rel="stylesheet" type="text/css">
-		<!-- CSS Bootstrap -->
 		<link href='<c:url value="/resources/css/bootstrap.css"/>' rel="stylesheet" type="text/css">
-		<!-- CSS Font Awesome -->
 		<link href='<c:url value="/resources/css/font-awesome.css"/>' rel="stylesheet" type="text/css">
-		<!-- CSS jQuery-UI -->
 		<link href='<c:url value="/resources/js/jquery-ui.css"/>' rel="stylesheet" type="text/css">
-		<!-- CSS de anima��es -->
-		<link href='<c:url value="/resources/css/animate.css"/>' rel="stylesheet" type="text/css">
 		
-		<!-- jQuery (necess�rio para plugins Bootstrap's JavaScript) --> 
 		<script type="text/javascript" src='<c:url value="/resources/js/jquery.js"/>'></script>
-		<!-- jQuery (necess�rio para plugins jQuery de gr�ficos) --> 
 		<script type="text/javascript" src='<c:url value="/resources/js/jquery-ui.js"/>'></script>
-		<!-- Inclua, a seguir, todos os plugins pr�-compilados, ou inclua arquivos individuais assim que necess�rio --> 
 		<script type="text/javascript" src='<c:url value="/resources/js/bootstrap.js"/>'></script>
-		<!-- Script padr�o do projeto --> 
-		<script type="text/javascript" src='<c:url value="/resources/js/default.js"/>'></script>
 		<script src="<c:url value="/resources/js/slide-effect.js" />"></script>
 		<script src="<c:url value="/resources/js/alert-closeable.js" />"></script>
 		

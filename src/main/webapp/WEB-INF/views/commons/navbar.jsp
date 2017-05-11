@@ -15,7 +15,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#about">Sobre nÃ³s</a></li>
+					<li><a href="#about">Sobre nós</a></li>
 					<li><a href="#services">O que fazemos</a></li>
 					<li><a href="#contact">Contato</a></li>
 				</ul>

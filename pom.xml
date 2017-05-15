@@ -7,7 +7,7 @@
   <description>Site home da Compliance Software</description>
   <packaging>war</packaging>
   <build>
-		<finalName>home</finalName>
+		<finalName>compliancehome</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -24,12 +24,53 @@
 				<configuration>
 					<server>mytomcat</server>
 					<url>http://localhost:8080/manager/text</url>
-					<path>/home</path>
+					<path>/compliancehome</path>
 				</configuration>
 			</plugin>
+			<plugin>
+		        <groupId>com.heroku.sdk</groupId>
+		        <artifactId>heroku-maven-plugin</artifactId>
+		        <version>1.1.3</version>
+		        <configuration>
+		        	<appName>compliancehome</appName>
+		          <includes>
+		            <include>target/dependency/newrelic-agent.jar</include>
+		          </includes>
+		        </configuration>
+		      </plugin>
+		      <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-dependency-plugin</artifactId>
+		        <version>2.6</version>
+		        <executions>
+		          <execution>
+		            <id>copy-new-relic</id>
+		            <phase>package</phase>
+		            <goals>
+		              <goal>copy-dependencies</goal>
+		            </goals>
+		            <configuration>
+		            	<includeGroupIds>com.newrelic.agent.java</includeGroupIds>
+		              <includeArtifactIds>newrelic-agent</includeArtifactIds>
+		              <stripVersion>true</stripVersion>
+		            </configuration>
+		          </execution>
+		        </executions>
+		      </plugin>
 		</plugins>
   </build>
   <dependencies>
+  	<dependency>
+      <groupId>com.newrelic.agent.java</groupId>
+      <artifactId>newrelic-agent</artifactId>
+      <version>3.18.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-servlet</artifactId>
+      <version>9.2.11.v20150529</version>
+    </dependency>
   	<dependency>
   		<groupId>junit</groupId>
   		<artifactId>junit</artifactId>
